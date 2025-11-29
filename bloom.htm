@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bloom Hair Growth Serum — Pregnancy-safe Hair Growth Serum</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f0222;
+      --accent1:#6a0dad; /* deep purple */
+      --accent2:#b48df3; /* lilac */
+      --muted:#e9e7ff;
+      --card:#1b0b2b;
+      --glass: rgba(255,255,255,0.06);
+      --radius:18px;
+    }
+    *{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial}
+    body{margin:0;background:linear-gradient(180deg,#0f0222 0%, #1a0338 60%, #2b0b4a 100%);color:var(--muted);-webkit-font-smoothing:antialiased}
+    .container{max-width:1100px;margin:40px auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:64px;height:64px;background:linear-gradient(135deg,var(--accent2),var(--accent1));border-radius:14px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 30px rgba(106,13,173,0.22)}
+    .logo svg{width:34px;height:34px}
+    h1{font-size:20px;margin:0}
+    .nav{display:flex;gap:14px}
+    .nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px}
+    .nav a:hover{background:var(--glass)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:26px;border-radius:var(--radius);box-shadow:0 8px 40px rgba(5,0,20,0.6)}
+    .lead{font-size:28px;line-height:1.05;margin:0 0 12px}
+    .sub{color:rgba(233,231,255,0.8);margin-bottom:16px}
+    .cta{display:flex;gap:10px}
+    .btn{background:var(--accent1);color:white;padding:12px 16px;border-radius:12px;border:none;cursor:pointer;font-weight:600}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+
+    /* Product box */
+    .product{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+    .bottle{width:220px;height:260px;border-radius:18px;background:linear-gradient(180deg,#fff,#f7f0ff);display:flex;align-items:flex-end;justify-content:center;padding:18px;color:#2b0038}
+    .label{background:linear-gradient(180deg,#6a0dad,#b48df3);width:90%;padding:12px;border-radius:10px;color:white}
+
+    /* grid features */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .feature{background:var(--card);padding:14px;border-radius:12px}
+    .feature h4{margin:0 0 6px}
+
+    /* Sections */
+    section{margin-top:22px}
+    .two-col{display:grid;grid-template-columns:1fr 420px;gap:22px}
+
+    /* Reviews */
+    .reviews{display:flex;flex-direction:column;gap:12px}
+    .review{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:12px}
+
+    footer{margin-top:36px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between}
+
+    /* responsive */
+    @media (max-width:920px){
+      .hero,.two-col{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .nav{display:none}
+    }
+    @media (max-width:560px){
+      .grid{grid-template-columns:1fr}
+      .bottle{width:180px;height:200px}
+    }
+
+    /* subtle animations */
+    .float{animation:float 6s ease-in-out infinite}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden>
+          <!-- simple hair-leaf icon -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 14c2-5 8-8 12-8" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 19c3-7 11-10 14-11" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/></svg>
+        </div>
+        <div>
+          <h1>Bloom Hair Growth Serum</h1>
+          <div style="font-size:13px;color:rgba(233,231,255,0.7)">Pregnancy-safe hair growth serum</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#ingredients">Ingredients</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="card">
+          <div class="lead">Safe. Natural. Mom-approved.</div>
+          <div class="sub">Bloom Hair Growth Serum is a dermatologist-tested hair growth serum specifically formulated for pregnant and postpartum women. Gentle on the scalp, powerful on roots.</div>
+          <div class="cta">
+            <button class="btn">Buy Now — ₹499</button>
+            <button class="btn secondary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Doctor Recommendations</button>
+          </div>
+
+          <div class="grid" id="features">
+            <div class="feature">
+              <h4>Pregnancy-safe</h4>
+              <p>No parabens, sulfates or hormone disruptors.</p>
+            </div>
+            <div class="feature">
+              <h4>Natural Ingredients</h4>
+              <p>Biotin, Onion Extract, Fenugreek & Aloe Vera.</p>
+            </div>
+            <div class="feature">
+              <h4>Clinically Tested</h4>
+              <p>8-week study shows 70% improvement in regrowth.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <aside class="card product">
+          <div class="bottle float">
+            <div class="label">Bloom Hair Growth Serum<br><small style="opacity:0.9">Hair Growth Serum</small></div>
+          </div>
+          <div style="font-size:13px;color:rgba(233,231,255,0.85)">50ml • Pregnancy & Breastfeeding Safe</div>
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <button class="btn" style="padding:8px 10px;font-size:13px">Add to Cart</button>
+            <button class="btn secondary" style="padding:8px 10px;font-size:13px">Download Info</button>
+          </div>
+        </aside>
+      </div>
+
+      <section id="ingredients" class="two-col">
+        <div class="card">
+          <h2 style="margin-top:0;color:var(--accent2)">Ingredients & Benefits</h2>
+          <ul>
+            <li><strong>Biotin</strong> — Strengthens hair roots and reduces breakage.</li>
+            <li><strong>Onion Extract</strong> — Stimulates natural regrowth.</li>
+            <li><strong>Fenugreek</strong> — Helps reduce hair fall and improves density.</li>
+            <li><strong>Aloe Vera</strong> — Soothes scalp and provides hydration.</li>
+            <li><strong>Vitamin E</strong> — Repairs and protects follicles.</li>
+            <li><strong>Castor & Coconut Oil</strong> — Deep nourishment and shine.</li>
+          </ul>
+        </div>
+
+        <aside class="card">
+          <h3 style="margin-top:0;color:var(--accent2)">Doctor Recommendations</h3>
+          <ol style="padding-left:18px">
+            <li>Apply 2–3 times a week on clean scalp.</li>
+            <li>Massage in circular motions for 2–3 minutes.</li>
+            <li>Leave overnight for best results; wash next morning.</li>
+            <li>Continue use for at least 8 weeks.</li>
+            <li>Patch test recommended for sensitive skin.</li>
+          </ol>
+          <div style="margin-top:10px;font-size:13px;color:rgba(233,231,255,0.8)">For personalised advice, consult your healthcare provider.</div>
+        </aside>
+      </section>
+
+      <section id="reviews">
+        <div class="card">
+          <h2 style="margin-top:0;color:var(--accent2)">What moms are saying</h2>
+          <div class="reviews">
+            <div class="review"><strong>Tamanna</strong> — "My hair fall reduced by almost 60% in just 5 weeks. Love the natural smell!"</div>
+            <div class="review"><strong>Ria</strong> — "Baby hair started growing near my forehead. Very gentle on scalp."</div>
+            <div class="review"><strong>Ananya</strong> — "Safe, soothing, and non-sticky. My doctor also approved it."</div>
+            <div class="review"><strong>Sneha</strong> — "I felt a real difference in hair thickness. Highly recommended!"</div>
+            <div class="review"><strong>Kavita</strong> — "Finally a product made for moms. No irritation, no chemicals!"</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="card">
+          <h2 style="margin-top:0;color:var(--accent2)">Get Product Info / Doctor Notes</h2>
+          <p style="margin-top:0">Download the info sheet or scan the QR on the package for complete details and doctor guidance.</p>
+
+          <form onsubmit="event.preventDefault();alert('Thanks — a product specialist will email you shortly (demo).');" style="display:flex;gap:8px;flex-wrap:wrap">
+            <input type="text" placeholder="Your name" required style="flex:1;padding:10px;border-radius:10px;border:none;background:rgba(255,255,255,0.02);color:var(--muted)">
+            <input type="email" placeholder="Email" required style="flex:1;padding:10px;border-radius:10px;border:none;background:rgba(255,255,255,0.02);color:var(--muted)">
+            <button class="btn" style="min-width:140px" type="submit">Request Info</button>
+          </form>
+
+          <div style="margin-top:14px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+            <div style="width:110px;background:var(--glass);padding:10px;border-radius:10px;text-align:center">
+              <div style="font-size:12px;opacity:0.9">Scan QR</div>
+              <!-- Replace src with actual QR image path when deploying -->
+              <img src="images/qr.png" alt="Bloom Hair Growth Serum QR" style="width:84px;height:84px;margin-top:8px;border-radius:8px;background:white;padding:6px"/>
+            </div>
+            <div style="font-size:13px;color:rgba(233,231,255,0.85)">Or email <a href="mailto:info@Bloom Hair Growth Serum.example" style="color:var(--accent2);text-decoration:none">info@Bloom Hair Growth Serum.example</a> for doctor-approved notes and clinical reports.</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© Bloom Hair Growth Serum 2025</div>
+      <div style="opacity:0.8">Made with care • Pregnancy & breastfeeding safe</div>
+    </footer>
+  </div>
+
+</body>
+</html>
